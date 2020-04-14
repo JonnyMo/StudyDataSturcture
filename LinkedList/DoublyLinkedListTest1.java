@@ -10,6 +10,7 @@ public class DoublyLinkedListTest1{
 		DoublyLinkedList list = new DoublyLinkedList();
 		list.addByOrder2(hero4);
 		list.list();
+		
 		System.out.println(".......");
 
 		list.addByOrder2(hero2);
