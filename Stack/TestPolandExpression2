@@ -1,0 +1,53 @@
+import java.util.*;
+public class TestPolandExpression{
+
+	public static void main(String[] args) {
+		String expression = "1+((2+3)*4)-5";
+		List<String> polandExpr = convertToPoland(expression);
+		polandExpr = reverseList(polandExpr);
+		for(int i = 0; i< polandExpr.size(); i++) {
+			System.out.println(polandExpr.get(i));
+		}
+		int result = calc(polandExpr);
+		System.out.println("result: " + result);
+	}
+
+	public static List<String> reverseList(List<String> src){
+		List<String> result = new ArrayList<String>();
+		for(int i = src.size() - 1; i >= 0; i--) {
+			result.add(src.get(i));
+		}
+		return result;
+	}
+
+	public static List convertToPoland(String expression) {
+			
+	}
+
+	public static void checkOper(String ch,Stack<String> numStack,Stack<String> operStack){
+		
+	}
+
+	public static int getOperLevl(String oper){
+	  return (oper == "+" || oper == "-") ? 0 : 1;
+	}
+
+	public static int calc(List<String> polandExpr){
+	
+	} 
+	
+	public static int doCalc(int num1, int num2, String op){
+		if("+".equals(op)) {
+			return num1 + num2;
+		}else if("-".equals(op)) {
+			return num1 - num2;
+		}else if("*".equals(op)) {
+			return num1 * num2;
+		} else if("/".equals(op)) {
+			return num1 / num2;
+		}else{
+			throw new RuntimeException("非法的符号： " + op);
+		}
+	} 
+
+}
